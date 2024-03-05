@@ -1,17 +1,14 @@
 ---
 # Manifest file downloaded from fusion
-externalId: tr-create_asset_hierarchy
-name: create_asset_hierarchy
+externalId: tr-ts_assets_mapping
+name: ts_assets_mapping
 query:
     file: transformation.sql
 destination:
-    type: asset_hierarchy
+    type: timeseries
 ignoreNullFields: true
 shared: true
-action: upsert
-schedule:
-    interval: 0 * * * *
-    isPaused: false
+action: update
 authentication:
     clientId: ${COGNITE_CLIENT_ID}
     clientSecret: ${COGNITE_CLIENT_SECRET}
